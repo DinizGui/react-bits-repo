@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+Host: https://imageworks.example.com
+Sitemap: https://imageworks.example.com/sitemap.xml
