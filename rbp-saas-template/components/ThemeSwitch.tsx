@@ -1,0 +1,40 @@
+"use client";
+
+import { useSyncExternalStore } from "react";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
+function ThemeSwitch() {
+  const e = useSyncExternalStore(
+      () => () => {},
+      () => true,
+      () => false,
+    ),
+    { setTheme: i, resolvedTheme: l } = useTheme();
+  if (!e)
+    return (
+      <div className="fixed bottom-6 right-6 z-50">
+        <button
+          className="w-12 h-12 rounded-full bg-foreground/10 opacity-30 cursor-not-allowed"
+          aria-label="Toggle theme"
+          disabled
+        />
+      </div>
+    );
+  const a = "dark" === l;
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      <button
+        onClick={() => {
+          i("dark" === l ? "light" : "dark");
+        }}
+        className="w-10 h-10 cursor-pointer rounded-full bg-frame text-foreground flex items-center justify-center opacity-30 hover:opacity-100 transition-opacity duration-300 shadow-lg hover:shadow-xl"
+        aria-label={a ? "Switch to light theme" : "Switch to dark theme"}
+        aria-pressed={a}
+        type="button"
+      >
+        {a ? <Sun className="w-5 h-5" aria-hidden="true" /> : <Moon className="w-5 h-5" aria-hidden="true" />}
+      </button>
+    </div>
+  );
+}
+export { ThemeSwitch };
