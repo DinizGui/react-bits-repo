@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+Host: https://nexus-ai.com
+Sitemap: https://nexus-ai.com/sitemap.xml

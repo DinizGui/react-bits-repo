@@ -7,6 +7,7 @@ Projetos Next.js + TypeScript + React reconstru√≠dos a partir dos deployments p√
 | `rbp-saas-template` | https://rbp-saas-template.vercel.app/ |
 | `rbp-minimal-template` | https://rbp-minimal-template.vercel.app/ |
 | `rbp-imageworks-template` | https://rbp-imageworks-template.vercel.app/ |
+| `rbp-ai-saas-template` | https://rbp-ai-saas-template.vercel.app/ |
 
 Para rodar qualquer um deles:
 
